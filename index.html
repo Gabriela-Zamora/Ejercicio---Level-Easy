@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Calcular promedio en JavaScript</title>
+ <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body id="body">
+
+    <h1>promedio</h1>
+    <label for="name">nombre del estudiante: </label>
+    <input id="nombreEstudiante" type="text" name="nombre del estudiante"/>
+    <br><br>
+    <label for="nota1">nota 1</label>
+    <input type="number"  id=numero1 type="number" name="numero1" />
+    <label for="nota2">nota 2</label>
+    <input  type="number" id=numero2 type="number" name="numero 2"/>
+    
+    <p id="numero3"></p>
+    <br><br>
+    <button id="btn-promedio">promediar</button>
+    <button id="btn-nombre">nombre Estudiante</button>
+    <br><br>
+    <p id="result"></p>
+    <div id="validacion"></div>
+    <div id="rango"></div>
+    <div id="clasificacion"></div>
+
+    <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
+        <option>color de fondo</option>
+        <option value="red">rojo</option>
+        <option value="blue">azul</option>
+        <option value="green">verde</option>
+    </select>
+    <script type="text/javascript">
+        function cambiarFondo(x){
+            console.log(x.value);
+
+            var body= document.getElementById("body");
+            body.style.backgroundColor=x.value;
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="calcularNotas.js"></script>
+</body>
+</html>
